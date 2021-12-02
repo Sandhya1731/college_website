@@ -1,0 +1,26 @@
+.frm{
+    border: solid black 2px;
+    width: 700px;
+    height:825px;
+    margin-top: 40px;
+    margin-left: 400px;
+    background-color: rgb(247, 234, 218);
+   
+}
+.outer{
+    font-size: large;
+    font-weight: 300;
+    margin:3px;
+}
+.office{
+    margin:5px;
+    padding:3px;
+    border: solid black 1px;
+    height:50px;
+}
+.submission{
+   margin-bottom: 30px;
+}
+.btn{
+    background-color:rgb(89, 201, 89);
+}

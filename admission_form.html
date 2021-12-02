@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form</title>
+    <link rel="stylesheet" href="admission_formcss.css">
+</head>
+<body>
+    
+    <div class="frm">
+        <img src="images/logo3.png" style="margin:10px; display: inline-block; width:100px ;border: solid black 1px;">
+     
+        <h1 style=" margin-left:100px; margin-right: 30px;  text-align: center; font-weight: 600; color: cadetblue; display: inline-block;">NIT KKR <br> Admission form</h1>
+          <p style="display: inline-block; text-align: left; margin:10px; font-size: medium;"> Contact :<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">nitkkr.ac.in</a><br>
+        Kurukshetra,Haryana</p>
+        <form action="successfull.html" onsubmit="return validation()">
+            <div class="outer">
+        <div class="office" >
+         For Office use only :<br>
+         Admission.no:<input type="number"> &nbsp&nbsp&nbsp&nbsp 
+         Enrollment.no:<input type="number" >
+         </div>
+         <br><br>
+         <div class="coll-form">
+         <label>Name of the Course:</label>
+         <input type="text" required id="course"> 
+         </div>
+         <br>
+         <div><label>Photo :</label>
+         <input type="file">
+         </div>
+         <br>
+         <div>
+         <label> Name:</label>
+         <input type="text" required id="studentname" autocomplete="off"> 
+         <span id="username" style="color: crimson;"></span>
+          </div>
+          <br>
+          <div>
+         <label>Sex:</label>
+         <input id="gen1" required type="radio" name="form">
+         <label for="gen1">M</label>
+         <input id="gen2"  name="form"type="radio">
+         <label for="gen2">F</label>
+         <div>
+         <br>
+         <label>Father Name:</label>
+         <input type="text" class="fa-name" autocomplete="off">  &nbsp &nbsp&nbsp&nbsp
+         <label> Occupation:</label>
+         <input type="text" autocomplete="off">
+         <br><br>
+        <label>Mother Name:</label>
+        <input type="text" class="fa-name" autocomplete="off">  &nbsp &nbsp&nbsp&nbsp
+        <label> Occupation:</label>
+        <input type="text" autocomplete="off"><br><br>
+        </div>
+         DOB:&nbsp<input type="date"> 
+         <br><br>
+         <div>
+          Category:<input id ="A" name="cat" type="radio"><label for="A">General</label>
+         <input id ="B" name="cat" type="radio"><label for="black">OBC</label>
+         <input id ="C" name="cat" type="radio"><label for="C">SC</label>
+         <input id ="D" name="cat" type="radio"><label for="D">ST</label>
+         <input id ="E" name="cat" type="radio"><label for="E">Others</label>
+         </div>
+         <br>
+         <div><label>Permanent Address:</label>
+         <input type="text" id="address" autocomplete="off"><div>
+         <br>
+        <div><label>Mobile No.:</label>
+            <input type="number" required id="mobilenumber" autocomplete="off">
+            <span id="mobileno" style="color: crimson;"></span>
+        </div>
+        <br>
+        
+        <div>
+         <label>Email:</label>
+         <input type="email" id="email" required autocomplete="off" >
+         </div>
+         <br><br>
+         <input type="submit" value="submit" class="btn">
+         
+         
+        </div>
+       </form>
+       </div>
+    </div><br>
+   
+    <script type="text/javascript">
+       function validation()
+       {  var mobile=document.getElementById('mobilenumber').value;
+           var user=document.getElementById('studentname').value;
+           if(user.length<=2)
+           {
+            document.getElementById('username').innerHTML="name should be of atleast 3 characters";
+           return false;
+         }
+         if(!isNaN(user))
+         {
+            document.getElementById('username').innerHTML="only characters are allowed";
+           return false;
+         }
+         if(mobile.length!=10)
+         {
+            document.getElementById('mobileno').innerHTML="mobile number should be of 10 numbers";
+           return false;
+         }
+        
+        
+       }
+      
+    </script>
+</body>
+</html>
