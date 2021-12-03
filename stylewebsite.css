@@ -376,4 +376,18 @@ nav .fa{
     font-size: 35px;
     
 }
+/*department*/
+.clear{
+    clear:both;
+}
+.bg-white{
+    background:#fff;
+    box-shadow:0px 0px 5px #ccc;
+    padding:15px;
+    min-height:300px;
+}
 
+#main-content{
+	margin:20px 0;
+    font-size: small;
+}
